@@ -8,9 +8,9 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
 {
     public class Category
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+        public string CategoryDescription { get; set; }
 
         public ICollection<Product> Products { get; set; }
 
