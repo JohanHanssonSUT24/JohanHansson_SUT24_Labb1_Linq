@@ -8,11 +8,11 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
 {
     public class Customer
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Address { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
+        public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerAddress { get; set; }
+        public string CustomerEmail { get; set; }
+        public string CustomerPhone { get; set; }
 
         public ICollection<Order> Orders { get; set; }
     }
