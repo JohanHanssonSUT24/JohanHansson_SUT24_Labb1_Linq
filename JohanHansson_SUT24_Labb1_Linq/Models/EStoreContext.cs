@@ -13,8 +13,8 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
     public class EStoreContext : DbContext
     {   
         private static IConfiguration _configuration = new ConfigurationBuilder() //Instance of IConfiguration to get information from json-file
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json")
+            .SetBasePath(Directory.GetCurrentDirectory())// Set given directory
+            .AddJsonFile("appsettings.json")//Pathway
             .Build();
 
         //Create DbSets for tables in DB
