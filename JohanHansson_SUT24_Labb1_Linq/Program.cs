@@ -8,13 +8,13 @@ namespace JohanHansson_SUT24_Labb1_Linq
     {
         static void Main(string[] args)
         {
-            using (var context = new EStoreContext())
+            using (var context = new EStoreContext()) //Create instance to communicate with DB
             {
-                var linqQueries = new LINQ_Queries(context);
+                var linqQueries = new LINQ_Queries(context); //Create instance of LINQ_Queries to be able to use LINQ wih DB.
 
                 var menu = new Menu(linqQueries);
-
-                menu.ShowMenu();
+                
+                menu.ShowMenu();//Call menu
             }
         }
     }
