@@ -74,7 +74,7 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
 
                     case "6":
                         Console.WriteLine("\n");
-                        _linqQueries.OrdersAboveThosand();
+                        _linqQueries.OrdersAboveThousand();
                         Console.WriteLine("\nTryck på valfri tangent för att återvända till menyn.");
                         Console.ReadKey();
                         break;

@@ -11,6 +11,7 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
     {
         public static void Seed(ModelBuilder modelBuilder)
         {
+            //Create modelbuilder for each category and add providedd seeddata
             modelBuilder.Entity<Category>().HasData(
                 new Category { CategoryId = 1, CategoryName = "Electronics", CategoryDescription = "Elektronik och tekniska produkter" },
                 new Category { CategoryId = 2, CategoryName = "Home & Kitchen", CategoryDescription = "Produkter för hemmet och köket" },
