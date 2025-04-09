@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JohanHansson_SUT24_Labb1_Linq.Models
 {
+    //Entities for Order 
     public class Order
     {
         public int OrderId { get; set; }
@@ -14,6 +15,8 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
         public decimal TotalAmount {  get; set; }
         public string OrderStatus {  get; set; }
 
+
+        //Navigationprops
         public Customer Customer { get; set; }
         public ICollection<OrderDetail> Details { get; set; }
     }
