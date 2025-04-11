@@ -25,6 +25,7 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
 
             foreach (var product in allElectronics)//Iterate through list and display productname and price.
             {
+                Console.WriteLine("-----------------------------------------");
                 Console.WriteLine($"Product: {product.ProductName}, Price: {product.ProductPrice}");
             }
 
@@ -39,6 +40,7 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
             {
                 Console.WriteLine($"Leverantör: {product.SupplierName}");
             }
+           
         }
 
         public void TotalOrderValue()//Method for calculating total value of orders last 30 days
@@ -73,6 +75,7 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
 
             foreach(var category in categoryCount)
             {
+                Console.WriteLine("----------------------------------------------");
                 Console.WriteLine($"Kategori: {category.Category}, Antal produkter: {category.ProductCount}");
             }
         }
@@ -83,10 +86,10 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
                 .Where(o => o.TotalAmount > 1000)//Filter where orders are total amount of 1000 or higher.
                 .Select(o => new
                 {
-                    OrderId = o.OrderId, //Select orderId
-                    CustomerName = o.Customer.CustomerName,//Select customername
-                    TotalAmount = o.TotalAmount,//Select total amount
-                    OrderDetails = o.Details.Select(d => new //Select orderdetails for each order
+                    OrderId = o.OrderId, //Select orderId, customer name, total amount and orderdetails for each order.
+                    CustomerName = o.Customer.CustomerName,
+                    TotalAmount = o.TotalAmount,
+                    OrderDetails = o.Details.Select(d => new 
                     {
                         ProductName = d.Product.ProductName,//Select productname from orderdetails
                         Quantity = d.Quantity,//Select quantity of the product in the order
