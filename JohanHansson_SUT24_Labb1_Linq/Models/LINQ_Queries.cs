@@ -33,12 +33,19 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
         public void LowStock()//Method to show suppliers with low stock-count
         {
             var lowStock = _context.Suppliers
+                                .Include(s => s.Products)
                                 .Where(s => s.Products.Any(p => p.StockQuantity < 10))//Filter suppliers where any products has a <10 stock-count
                                 .ToList();
 
-            foreach(var product in lowStock)
+            foreach(var supplier in lowStock)
             {
-                Console.WriteLine($"Leverantör: {product.SupplierName}");
+                Console.WriteLine($"Leverantör: {supplier.SupplierName}");//Add suppliers name
+                
+                foreach (var product in supplier.Products.Where(p => p.StockQuantity < 10))//Show products with a stock count lower than 10.
+                {
+                    Console.WriteLine($"Produktnamn: {product.ProductName} Antal i lager: {product.StockQuantity}");
+                }
+                Console.WriteLine("---------------------------");
             }
            
         }
