@@ -16,7 +16,6 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
             .SetBasePath(Directory.GetCurrentDirectory())// Set given directory
             .AddJsonFile("appsettings.json")//Pathway
             .Build();
-
         //Create DbSets for tables in DB
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -33,8 +32,6 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
         {
             base.OnModelCreating(modelBuilder); //Create the basic configurations of DB 
             SeedData.Seed(modelBuilder); // Add seeddata to DB
-
         }
-
     }
 }

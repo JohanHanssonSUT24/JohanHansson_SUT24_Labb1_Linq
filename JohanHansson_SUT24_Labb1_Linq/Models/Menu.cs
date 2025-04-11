@@ -23,7 +23,6 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
             while(!exit)
             {
                 Console.Clear();
-
                 Console.WriteLine("[1] - Hämta alla Electronicsprodukter");
                 Console.WriteLine("[2] - Leverantör med lågt lagersaldo");
                 Console.WriteLine("[3] - Totalt ordervärde");
@@ -81,9 +80,7 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
 
                     case "0":
                         exit = true;
-                        break;
-
-                    
+                        break;                   
                 }
             }
         }

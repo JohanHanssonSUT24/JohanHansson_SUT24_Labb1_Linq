@@ -28,7 +28,6 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
                 Console.WriteLine("-----------------------------------------");
                 Console.WriteLine($"Product: {product.ProductName}, Price: {product.ProductPrice}");
             }
-
         }
         public void LowStock()//Method to show suppliers with low stock-count
         {
@@ -46,8 +45,7 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
                     Console.WriteLine($"Produktnamn: {product.ProductName} Antal i lager: {product.StockQuantity}");
                 }
                 Console.WriteLine("---------------------------");
-            }
-           
+            }           
         }
 
         public void TotalOrderValue()//Method for calculating total value of orders last 30 days
@@ -113,7 +111,6 @@ namespace JohanHansson_SUT24_Labb1_Linq.Models
                 foreach (var orderDetail in order.OrderDetails)
                 {
                     Console.WriteLine($"Produkt: {orderDetail.ProductName}, Antal: {orderDetail.Quantity}, Styckpris: {orderDetail.UnitPrice}");
-                    
                 }
             }
         }
